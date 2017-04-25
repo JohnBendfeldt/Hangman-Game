@@ -1,25 +1,20 @@
 
-var words= ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle"];
-var picList= ["assets/images/trump.jpg", "assets/images/america-2.jpg", "assets/images/freedom.jpg", "assets/images/liberty.jpg", "assets/images/justice.jpg", "assets/images/flag.jpg", "assets/images/eagle.jpg"];
-var blank = "";
-var wrongGuess = [];
-var guessRemain = 10;
-var answer;
-var score = 0;
-var dispPhoto
+var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, wordPic;
 
 setUp ();
 
 function setUp () {
 
-var randomNum = Math.floor(Math.random() * words.length)
-    answer = words[randomNum];
-    dispPhoto = picList[randomNum];
-
+var words= ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle"];
+    picList= ["assets/images/trump.jpg", "assets/images/america-2.jpg", "assets/images/freedom.jpg", "assets/images/liberty.jpg", "assets/images/justice.jpg", "assets/images/flag.jpg", "assets/images/eagle.jpg"];
+    ranNum = Math.floor(Math.random() * words.length)
+    currentWord = words[ranNum];
+    wordPic = picList[ranNum];
+    availableLetters = "abcdefghijklmnopqrstuvwxyz";
     wrongGuess = [];
     guessRemain = 10;
     blank = "";
-for (var i = 0; i < answer.length; i++) {
+for (var i = 0; i < currentWord.length; i++) {
         blank += "_" + "";
     }
 };
@@ -32,9 +27,9 @@ document.onkeyup = function(event) {
 
     checkGuess(userGuess);
     function checkGuess(userGuess) {
-        if (answer.indexOf(userGuess) > -1) {
-            for (var i = 0; i < answer.length; i++) { 
-                if (answer[i] === userGuess) {
+        if (currentWord.indexOf(userGuess) > -1) {
+            for (var i = 0; i < currentWord.length; i++) { 
+                if (currentWord[i] === userGuess) {
                     displayLtrAt(userGuess, i);
                     endGame ();
              }
@@ -66,7 +61,7 @@ function displayLtrAt(letter, index) {
 function endGame () {
 // Out of gueesses
     if (guessRemain === 0) {
-        document.getElementById("photochange").src = ("assets/images/pepe-lost.jpg");
+        document.getElementById("picChange").src = ("assets/images/pepe-lost.jpg");
         document.getElementById("status").textContent = "You lose!";
         document.getElementById("blanks").textContent = "Press key to restart";
         setUp ();
@@ -76,9 +71,9 @@ function endGame () {
     else if (blank.indexOf("_") === -1 && guessRemain != 0) {
         document.getElementById("status").textContent = "You win!";
         document.getElementById("blanks").textContent = "Press any key to play again!";
-        document.getElementById("photochange").src = dispPhoto;
+        document.getElementById("picChange").src = wordPic;
         score++;
-        document.getElementById("wins").textContent = score;
+        document.getElementById("score").textContent = score;
         setUp();
 
     } 
