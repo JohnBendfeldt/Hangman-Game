@@ -7,6 +7,7 @@ header {
 	text-align: center;
 	width: 100%;
 	margin: 0px auto;
+	border-bottom: 5px solid #6B5637;
 }
 h1 {
 	padding-top: 25px;
@@ -20,6 +21,7 @@ h1 {
 	font-size: 48px;
 	letter-spacing: 2.5;
 }
+/* Establishes box for game to sit in */
 .container {
   margin: 20px auto;
   width: 75%;
@@ -49,6 +51,7 @@ p {
 	font-weight: bold;
 	color: #13334B;
 }
+/* Establish game image parameters */
 img {
 	width: 300px;
 	height: 300px;
