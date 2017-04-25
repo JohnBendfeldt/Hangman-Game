@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hangman Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <header>
 	<h1>Hangman Game</h1>
 </header>
 <body>
+<section class="container">
+  <img src="assets/images/pepe-win.jpg" alt="pepe" id="photochange"/>
+  <h2>Your Score: <span id="wins">0</span></h2>
+  <h2><span id="status">Current Word:</span></h2>
+  <h2><span id="blanks">Guess a letter to start</h2>
 
+  <h2>Letters Guessed:</h2>
+  <h3><span id="wrongGuesses"></span></h3>
+
+   <h2>Guesses Remaining: <span id="remain">10</span></h2>
+
+</section>
 <script src="assets/javascript/game.js"></script>
 </body>
 </html>
