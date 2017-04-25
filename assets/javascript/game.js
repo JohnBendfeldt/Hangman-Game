@@ -1,5 +1,5 @@
 
-var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, wordPic;
+var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic;
 
 setUp ();
 
@@ -10,7 +10,6 @@ var words= ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle"
     ranNum = Math.floor(Math.random() * words.length)
     currentWord = words[ranNum];
     wordPic = picList[ranNum];
-    availableLetters = "abcdefghijklmnopqrstuvwxyz";
     wrongGuess = [];
     guessRemain = 10;
     blank = "";
@@ -64,6 +63,8 @@ function endGame () {
         document.getElementById("picChange").src = ("assets/images/pepe-lost.jpg");
         document.getElementById("status").textContent = "You lose!";
         document.getElementById("blanks").textContent = "Press key to restart";
+        loses++;
+        document.getElementById("loses").textContent = loses;
         setUp ();
 
     }
