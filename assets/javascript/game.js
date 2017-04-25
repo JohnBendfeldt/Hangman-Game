@@ -26,6 +26,7 @@ document.onkeyup = function(event) {
     document.getElementById("blanks").textContent = blank;
     document.getElementById("wrongGuesses").textContent = wrongGuess;
     document.getElementById("status").textContent = "Current Word:";
+    document.getElementById("completion").textContent = "";
 // Checks if guess was accurate
     checkGuess(userGuess);
     function checkGuess(userGuess) {
@@ -67,10 +68,11 @@ function roundOver () {
 // Out of gueesses
     if (guessRemain === 0) {
         document.getElementById("picChange").src = ("assets/images/pepe-lost.jpg");
-        document.getElementById("status").textContent = "You lose!";
+        document.getElementById("status").textContent = "You lose! The word was:";
         // Plays losing clip
         audioLoss.play();
-        document.getElementById("blanks").textContent = "Press key to restart";
+        document.getElementById("blanks").textContent = currentWord.toUpperCase();
+        document.getElementById("completion").textContent = "Press Any Key to Try Again";
         loses++;
         document.getElementById("loses").textContent = loses;
         setUp ();
@@ -78,10 +80,10 @@ function roundOver () {
     }
 // Guessed the word correctly
     else if (blank.indexOf("_") === -1 && guessRemain != 0) {
-        document.getElementById("status").textContent = "You win!";
+        document.getElementById("status").textContent = "You win! The word was";
         // Plays winning clip
         audioWin.play();
-        document.getElementById("blanks").textContent = "Press any key to play again!";
+        document.getElementById("completion").textContent = "Press Any Key to Restart";
         document.getElementById("picChange").src = wordPic;
         score++;
         document.getElementById("score").textContent = score;

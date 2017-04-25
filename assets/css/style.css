@@ -47,9 +47,22 @@ h3 {
 	font-size: 18px;
 	line-height: 1.5;
 }
+h4 {
+	font-family: "Arial", sans-serif;
+	color: #23558A;
+	text-shadow:
+			-1px -1px 0 #6C0C17,  
+    		1px -1px 0 #6C0C17,
+    		-1px 1px 0 #6C0C17,
+     		1px 1px 0 #6C0C17;
+	font-size: 26px;
+	line-height: 1.5;
+	font-weight: bold;
+}
 p {
 	font-weight: bold;
-	color: #13334B;
+	color: #23558A;
+	text-transform: uppercase;
 }
 /* Establish game image parameters */
 img {
