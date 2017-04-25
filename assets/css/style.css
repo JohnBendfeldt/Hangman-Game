@@ -1,0 +1,9 @@
+header {
+	background-image: url(../images/america.jpg);
+	top: 0;
+	position: fixed;
+	height: 100px;
+	text-align: center;
+	width: 100%;
+	margin: 0px auto;
+}
