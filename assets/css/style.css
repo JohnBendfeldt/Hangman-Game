@@ -20,6 +20,14 @@ h1 {
 	font-size: 48px;
 	letter-spacing: 2.5;
 }
+.container {
+  margin: 20px auto;
+  width: 75%;
+  padding: 50px;
+  text-align: center;
+  border: 5px solid #6C0C17;
+  background-color: #D8CBA5;
+}
 h2 {
 	font-family: "Arial", sans-serif;
 	color: #FFFFFF;
@@ -29,29 +37,20 @@ h2 {
     		-1px 1px 0 #000,
      		1px 1px 0 #000;
 	font-size: 24px;
-	letter-spacing: 2.5;
+	line-height: 1.5;
 }
 h3 {
 	font-family: "Arial", sans-serif;
-	color: #FFFFFF;
-	text-shadow:
-			-1px -1px 0 #000,  
-    		1px -1px 0 #000,
-    		-1px 1px 0 #000,
-     		1px 1px 0 #000;
+	color: #7E1020;
 	font-size: 18px;
-	letter-spacing: 2.5;
+	line-height: 1.5;
 }
-.container {
-  margin: 20px auto;
-  width: 75%;
-  padding: 50px;
-  text-align: center;
-  border: 5px solid #6C0C17;
-  background-color: #D8CBA5;
+p {
+	font-weight: bold;
+	color: #13334B;
 }
 img {
-	width: 400px;
-	height: 400px;
-	border: 5px solid #132B39;
+	width: 300px;
+	height: 300px;
+	border: 5px solid #13334B;
 }

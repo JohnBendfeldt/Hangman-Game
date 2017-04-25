@@ -44,14 +44,14 @@ document.onkeyup = function(event) {
 };
 
 function displayLtrAt(letter, index) {
-    var newTxt = "";
+    var letterGuess = "";
     for (var i = 0; i < blank.length; i++) 
         if (i === index) {
-            newTxt += letter;
+            letterGuess += letter;
         } else {
-            newTxt += blank[i];
+            letterGuess += blank[i];
         }
-    blank = newTxt.toUpperCase();
+    blank = letterGuess.toUpperCase();
 
         document.getElementById("blanks").textContent = blank;
     };
