@@ -1,5 +1,5 @@
 
-var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic;
+var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic, audioWin;
 
 setUp ();
 
@@ -13,6 +13,8 @@ var words= ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle"
     wrongGuess = [];
     guessRemain = 10;
     blank = "";
+    audioWin = new Audio("assets/sounds/djwin.mp3");
+    audioLoss = new Audio("assets/sounds/madworldloss.mp3");
 for (var i = 0; i < currentWord.length; i++) {
         blank += "_" + "";
     }
@@ -62,6 +64,7 @@ function endGame () {
     if (guessRemain === 0) {
         document.getElementById("picChange").src = ("assets/images/pepe-lost.jpg");
         document.getElementById("status").textContent = "You lose!";
+        audioLoss.play();
         document.getElementById("blanks").textContent = "Press key to restart";
         loses++;
         document.getElementById("loses").textContent = loses;
@@ -71,12 +74,12 @@ function endGame () {
 // Guessed the word correctly
     else if (blank.indexOf("_") === -1 && guessRemain != 0) {
         document.getElementById("status").textContent = "You win!";
+        audioWin.play();
         document.getElementById("blanks").textContent = "Press any key to play again!";
         document.getElementById("picChange").src = wordPic;
         score++;
         document.getElementById("score").textContent = score;
         setUp();
-
     } 
 };
 
