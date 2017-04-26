@@ -26,9 +26,9 @@ body {
 }
 /* Establishes box for game to sit in */
 .container {
-  margin: 20px auto;
-  width: 75%;
-  padding: 50px;
+  margin: 10px auto;
+  width: 65%;
+  padding: 10px;
   text-align: center;
   border: 5px solid #6C0C17;
   background-color: #D8CBA5;

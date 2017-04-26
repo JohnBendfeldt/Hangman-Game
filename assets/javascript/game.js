@@ -1,5 +1,5 @@
 // Variables that are used, sets up score and loses categories
-var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic, audioWin;
+var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic, audioWin, audioLoss;
 
 setUp();
 // Sets up inital game status/ round reset basically
@@ -41,6 +41,7 @@ document.onkeyup = function(event) {
         // If the guess is wrong it is pushed down into the wrongGuess text area
         } else if (wrongGuess.indexOf(userGuess) === -1) {
             wrongGuess.push(userGuess);
+            wrongGuess = wrongGuess.sort();
             document.getElementById("wrongGuesses").textContent = wrongGuess;
             // Subtracts 1 remaining guess
             guessRemain--;
