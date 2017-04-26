@@ -5,9 +5,9 @@ setUp();
 // Sets up inital game status/ round reset basically
 function setUp() {
 
-var words = ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle", "equality", "capitalism"];
-    picList = ["assets/images/trump.jpg", "assets/images/america-2.jpg", "assets/images/freedom.jpg", "assets/images/liberty.jpg", "assets/images/justice.jpg", "assets/images/flag.jpg", "assets/images/eagle.jpg", "assets/images/equality.png", "assets/images/capitalism.jpg"];
-    ranNum = Math.floor(Math.random() * words.length)
+var words = ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle", "equality", "capitalism", "love", "constitution", "independence"];
+    picList = ["assets/images/trump.jpg", "assets/images/america-2.jpg", "assets/images/freedom.jpg", "assets/images/liberty.jpg", "assets/images/justice.jpg", "assets/images/flag.jpg", "assets/images/eagle.jpg", "assets/images/equality.png", "assets/images/capitalism.jpg", "assets/images/love.jpg", "assets/images/constitution.jpg", "assets/images/independence.jpg"];
+    ranNum = Math.floor(Math.random() * words.length);
     currentWord = words[ranNum];
     wordPic = picList[ranNum];
     wrongGuess = [];
