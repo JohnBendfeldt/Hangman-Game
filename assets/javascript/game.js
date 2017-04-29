@@ -1,11 +1,3 @@
-$(document).ready(function() {
-    $('#field').click(function(e){
-        $(this).focus();
-    });
-    $('#button').click(function(e) {
-        $('#field').trigger('click');
-    });
-});
 // Variables that are used, sets up score and loses categories
 var words, picList, blank, wrongGuess, guessRemain, currentWord, score = 0, loses = 0, wordPic, audioWin, audioLoss;
 var activeList = ["trump", "america", "freedom", "liberty", "justice", "flag", "eagle", "equality", "capitalism", "love", "constitution", "independence"];
