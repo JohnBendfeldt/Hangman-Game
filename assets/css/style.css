@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+/*establishes header at the top of the page */
 header {
 	background-image: url(../images/america.gif);
 	background-size: 100% auto;
@@ -15,9 +16,9 @@ h1 {
 	color: #D8CBA5;
 	text-shadow:
 			-1px -1px 0 #000,  
-    		1px -1px 0 #000,
-    		-1px 1px 0 #000,
-     		1px 1px 0 #000;
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
 	font-size: 48px;
 	letter-spacing: 2.5;
 }
@@ -38,9 +39,9 @@ h2 {
 	color: #FFFFFF;
 	text-shadow:
 			-1px -1px 0 #000,  
-    		1px -1px 0 #000,
-    		-1px 1px 0 #000,
-     		1px 1px 0 #000;
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
 	font-size: 24px;
 	line-height: 1.5;
 }
@@ -55,9 +56,9 @@ h4 {
 	color: #23558A;
 	text-shadow:
 			-1px -1px 0 #6C0C17,  
-    		1px -1px 0 #6C0C17,
-    		-1px 1px 0 #6C0C17,
-     		1px 1px 0 #6C0C17;
+			1px -1px 0 #6C0C17,
+			-1px 1px 0 #6C0C17,
+			1px 1px 0 #6C0C17;
 	font-size: 26px;
 	line-height: 1.5;
 	font-weight: bold;
@@ -73,6 +74,7 @@ img {
 	height: 300px;
 	border: 5px solid #13334B;
 }
+/*establishes spaces between the blanks */
 #blanks {
 	letter-spacing: .25em;
 }

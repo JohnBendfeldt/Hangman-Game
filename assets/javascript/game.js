@@ -13,7 +13,7 @@ function setUp() {
         ranNum = Math.floor(Math.random() * activeList.length);
         currentWord = activeList[ranNum];
         index = activeList.indexOf(currentWord);
-        activeList.splice(index, 1)
+        activeList.splice(index, 1);
         wordPic = picList[currentWord];
         wrongGuess = [];
         guessRemain = 10;
