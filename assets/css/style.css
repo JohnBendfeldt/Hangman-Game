@@ -4,7 +4,6 @@ header {
 	background-image: url(../images/america.gif);
 	background-size: 100% auto;
 	top: 0;
-	height: 100px;
 	text-align: center;
 	width: 100%;
 	margin: 0px auto;
@@ -70,8 +69,9 @@ p {
 }
 /* Establish game image parameters */
 img {
-	width: 300px;
-	height: 300px;
+	max-width: 300px;
+	max-height: 300px;
+	width: 100%;
 	border: 5px solid #13334B;
 }
 /*establishes spaces between the blanks */
