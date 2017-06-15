@@ -68,10 +68,9 @@ p {
 	text-transform: uppercase;
 }
 /* Establish game image parameters */
-img {
-	max-width: 300px;
-	max-height: 300px;
-	width: 100%;
+#picChange {
+	width: 300px !important;
+	height: 300px !important;
 	border: 5px solid #13334B;
 }
 /*establishes spaces between the blanks */

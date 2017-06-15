@@ -82,7 +82,7 @@ function displayLtrAt(letter, index) {
 function roundOver () {
 // Out of gueesses
     if (guessRemain === 0) {
-        document.getElementById("picChange").src = ("assets/images/pepe-lost.jpg");
+        document.getElementById("picChange").src = ("assets/images/sad_eagle.jpg");
         document.getElementById("status").textContent = "You lose! The word was:";
         // Plays losing clip
         audioLoss.play();
